@@ -1,7 +1,6 @@
 class AnimateBtn {
   constructor(btn) {
     this.btn = document.querySelectorAll(btn);
-    console.log("test");
   }
 
   makeContainer() {

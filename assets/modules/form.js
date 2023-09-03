@@ -5,6 +5,7 @@ import validate from "./validate";
 export { form };
 
 const form = (state) => {
+  const price = document.querySelector(".calc-price");
   const form = document.querySelectorAll("form");
   const input = document.querySelectorAll("input");
   const textArea = document.querySelectorAll("textarea");
@@ -108,6 +109,10 @@ const form = (state) => {
 
       function clearModal() {
         setTimeout(() => {
+          if (price.textContent) {
+            price.textContent =
+              "Для расчета нужно выбрать размер картины и материал картины";
+          }
           spinner.remove();
           statusMessages.remove();
           clearInputForm(input, textArea, upload, select);
